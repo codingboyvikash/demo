@@ -1,0 +1,325 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--favicon-->
+	<link rel="icon" href="assets/images/favicon-32x32.png" type="image/png">
+	<!--plugins-->
+	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet">
+	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet">
+	<!-- Bootstrap CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-extended.css" rel="stylesheet">
+	<link href="../css2?family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
+	<link href="assets/css/icons.css" rel="stylesheet">
+	<title>Explosion Earning | Registration</title>
+</head>
+
+<body class="log-img">
+	<!--wrapper-->
+	<div class="wrapper">
+		<div class="d-flex align-items-center justify-content-center my-5">
+			<div class="container">
+				<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+					<div class="col mx-auto">
+						<div class="card mt-5">
+							<div class="card-body">
+								<div class="rounded">
+									<div class="text-center">
+										<img src="assets/images/logo.png" alt="logo" width="150">
+										<h3 class="">Create New Account</h3>
+									</div>
+									<span class="sponsor" style="color:orange"></span>
+									<div class="form-body">
+										<form class="row g-3" action="RegisterProcess" method="POST">
+											<div class="col-12">
+												<label for="inputEmailAddress" class="form-label">Refferal ID</label>
+												<input type="text" class="form-control userdtl" name="usponsor" placeholder="132465789" onkeyup="referalId()" onblur="userdtl()" value="" required="true">
+											</div>
+											<div class="col-sm-12">
+												<label for="inputFirstName" class="form-label">Name</label>
+												<input type="text" class="form-control" name="uname" placeholder="Enter your full name" required="true">
+											</div>
+											<div class="col-sm-6">
+												<label for="inputLastName" class="form-label">Mobile No.</label>
+												<input type="number" min="1" name="umobile" class="form-control" placeholder="+91 " required="true">
+											</div>
+											<div class="col-sm-6">
+												<label for="inputEmailAddress" class="form-label">Email Address</label>
+												<input type="email" class="form-control" name="uemail" placeholder="example@user.com" required="true">
+											</div>
+											<div class="col-sm-6">
+												<label for="inputChoosePassword" class="form-label">Password</label>
+												<div class="input-group" id="show_hide_password">
+													<input type="password" class="form-control border-end-0 passShow" name="upass" placeholder="Enter Password">
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<label for="inputEmailAddress" class="form-label">Confirm Password</label>
+												<input type="password" class="form-control passShow" name="uconpass" placeholder="Enter confirm password" required="true">
+											</div>
+											<div class="col-12">
+												<div class="form-check form-switch">
+													<input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+													<label class="form-check-label" for="flexSwitchCheckChecked">I read and agree to Terms & Conditions</label>
+												</div>
+											</div>
+											<div class="col-12 text-center">
+												<label class="submit__control">
+													<h6>Are you human?</h6>
+													<div class="submit__generated">
+													</div>
+													<i class='bx bx-refresh'></i>
+												</label>
+												<button type="submit" class="btn btn-primary w-100 submit overlay">Create Account</button>
+												<div class="submit__overlay"></div>
+											</div>
+											<p>Already have an account? <a href="Login.html">Login</a>
+											</p>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end row-->
+			</div>
+		</div>
+	</div>
+
+	<script src="../sweetalert%402.1.2/dist/sweetalert.min.js"></script>
+<style>
+  .swal-modal {
+    width: 20rem;
+    opacity: 0;
+    pointer-events: none;
+    background-color: #fff;
+    text-align: center !important;
+    border-radius: 5px;
+    position: static;
+    margin: 25px auto;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    z-index: 10001;
+    transition: opacity .2s,-webkit-transform .3s;
+    transition: transform .3s,opacity .2s;
+    transition: transform .3s,opacity .2s,-webkit-transform .3s;
+}
+.swal-button {
+    background-color: #00cfe8!important;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 10px 24px;
+    margin: 0;
+    box-shadow: rgb(0 0 0 / 17%) 0px -23px 25px 0px inset, rgb(0 0 0 / 15%) 0px -36px 30px 0px inset, rgb(0 0 0 / 10%) 0px -79px 40px 0px inset, rgb(0 0 0 / 6%) 0px 2px 1px, rgb(0 0 0 / 9%) 0px 4px 2px, rgb(0 0 0 / 9%) 0px 8px 4px, rgb(0 0 0 / 9%) 0px 16px 8px, rgb(0 0 0 / 9%) 0px 32px 16px !important;
+    cursor: pointer;
+    width: 17rem;
+}
+.swal-text {
+    font-size: 14px;
+    position: relative;
+    float: none;
+    line-height: normal;
+    vertical-align: top;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+    padding: 0 10px;
+    font-weight: bold;
+    color: #283046;
+    max-width: calc(100% - 20px);
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+}
+.swal-title {
+    color: rgba(0,0,0,.65);
+    font-weight: 600;
+    text-transform: none;
+    position: relative;
+    display: block;
+    padding: 13px 16px;
+    font-size: 22px;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 0;
+}
+</style>
+
+
+
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+	<!--plugins-->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+	<script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+	<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/userdash.js"></script>
+	<style>
+		.submit__generated {
+			display: inline-block;
+		}
+
+		.submit__generated span {
+			display: inline-block;
+			width: 35px;
+			height: 35px;
+			vertical-align: center;
+			line-height: 35px;
+			font-weight: bold;
+			font-size: 16px;
+			color: rgba(0, 0, 0, 0.9);
+			text-align: center;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			border-radius: 4px;
+		}
+
+		.submit__generated.valid:after,
+		.submit__generated.unvalid:after {
+			font-family: FontAwesome;
+			font-size: 18px;
+			margin-left: 10px;
+		}
+
+		.submit__generated.valid:after {
+			content: "Correct";
+			color: #2ecc71;
+		}
+
+		.submit__generated.valid .submit__input {
+			border: 1px solid #2ecc71;
+			color: #2ecc71 !important;
+		}
+
+		.submit__generated.unvalid:after {
+			content: "Wrong!";
+			color: #e74c3c;
+		}
+
+		.submit__generated.unvalid .submit__input {
+			border: 1px solid #e74c3c;
+			color: #e74c3c;
+		}
+
+		.submit__generated .submit__input {
+			position: relative;
+			outline: 0;
+			height: 35px;
+			width: 35px;
+			border-radius: 4px;
+			border: 1px solid #42A0DD;
+			color: #42A0DD;
+			text-align: center;
+			font-weight: bold;
+			font-size: 16px;
+			top: -2px;
+		}
+
+		i.bx-refresh {
+			font-weight: bold;
+			margin: 4px 0 0px 5px;
+			padding: 5px;
+			font-size: 23px;
+			color: #0d6efd;
+			cursor: pointer;
+			transform-origin: center center;
+			transition: transform 0.2s ease-out, color 0.2s ease-out;
+		}
+
+		i.bx-refresh:hover {
+			color: rgba(0, 0, 0, 0.4);
+			transform: rotate(180deg);
+		}
+
+		span.submit__error,
+		span.submit__error--empty {
+			color: #e74c3c;
+			position: absolute;
+			margin-top: 0px;
+			margin-left: 100px;
+		}
+
+		.submit {
+			display: block;
+			margin: 50px 0;
+			padding: 7px 15px;
+			font-weight: bold;
+			font-size: 16px;
+			color: #fff;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			outline: none;
+			border: 0;
+			background-color: #42A0DD;
+			background-clip: padding-box;
+			border-radius: 3px;
+			box-shadow: 0 4px 0 #2C81BA;
+			opacity: 1;
+			transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+		}
+
+		.submit:hover {
+			background-color: #3498db;
+		}
+
+		.submit:active,
+		.submit.enter-press,
+		.submit.overlay {
+			margin: 55px 0 46px 0;
+			box-shadow: none;
+		}
+
+		.submit__overlay {
+			height: 50px;
+			background-color: rgba(255, 255, 255, 0.8);
+			position: static;
+			margin-top: -90px;
+			margin-left: -5px;
+		}
+
+		.low-opa {
+			opacity: 0.4;
+		}
+
+		.fadeOut {
+			opacity: 0;
+			transform: translateY(10px);
+		}
+
+		.fadeIn {
+			opacity: 1 !important;
+			transform: translateY(0px) !important;
+		}
+
+		.form-fields,
+		.form-success {
+			transition: all 0.2s ease-out;
+		}
+
+		.form-success {
+			opacity: 0;
+			transform: translateY(-10px);
+			margin-top: 20px;
+		}
+	</style>
+
+</body>
+
+</html>
